@@ -36,7 +36,8 @@ The CSD 4464 Assignment 1 solutions are available in this repository. Five code 
 - The `ClueTree` is implemented as a binary search tree for storing unique clues.
 
 ## How to Run the Code
-1. Clone this repository to your local machine using:git clone https://github.com/YourUsername/DataStructures-Assignment1-YourName.git
-2. Open the project in your preferred IDE.
-3. Run each class's `main` method individually to test the functionality.
-4. Each class file contains its own `main` method for demonstration and testing purposes.
+1. Clone this repository to your local machine using:git clone
+   https://github.com/roshan1902/DataStructures-Assignment1-Roshan_Dhakal
+3. Open the project in your preferred IDE.
+4. Run each class's `main` method individually to test the functionality.
+5. Each class file contains its own `main` method for demonstration and testing purposes.
