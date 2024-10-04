@@ -1,4 +1,6 @@
-package com.roshan.assingnment;
+package com.roshan.assignment;
+
+import java.util.HashSet;
 
 public class LabyrinthPath {
     private Node head;
@@ -14,6 +16,7 @@ public class LabyrinthPath {
         }
     }
 
+    // Adds a new location to the end of the path
     public void addLocation(String location) {
         Node newNode = new Node(location);
         if (head == null) {
@@ -27,6 +30,7 @@ public class LabyrinthPath {
         }
     }
 
+    // Removes the last visited location from the path
     public void removeLastLocation() {
         if (head == null) return;
         if (head.next == null) {
@@ -40,16 +44,23 @@ public class LabyrinthPath {
         }
     }
 
+    // Simplified method to detect if the path contains a loop using a set
     public boolean containsLoop() {
-        Node slow = head, fast = head;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if (slow == fast) return true;
+        HashSet<Node> visitedNodes = new HashSet<>();  // Set to track visited nodes
+        Node temp = head;
+
+        // Traverse the list and check for duplicates
+        while (temp != null) {
+            if (visitedNodes.contains(temp)) {  // If the node is already visited, there's a loop
+                return true;
+            }
+            visitedNodes.add(temp);  // Add current node to the set
+            temp = temp.next;  // Move to the next node
         }
-        return false;
+        return false;  // No loop found
     }
 
+    // Prints the entire path of locations
     public void printPath() {
         Node temp = head;
         while (temp != null) {
@@ -65,10 +76,11 @@ public class LabyrinthPath {
         path.addLocation("Entrance");
         path.addLocation("Hallway");
         path.addLocation("Treasure Room");
-        path.printPath();
 
-        path.removeLastLocation();
-        System.out.println("Path after removing last location:");
+        // Creating a loop manually for testing
+        path.head.next.next.next = path.head;  // Hallway -> Entrance loop
+
         path.printPath();
+        System.out.println("Path contains a loop: " + path.containsLoop());
     }
 }
