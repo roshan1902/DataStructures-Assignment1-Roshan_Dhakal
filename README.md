@@ -5,12 +5,12 @@
 - **Student ID**: C0916271
 
 ## Assignment Overview
-This repository contains solutions for Assignment 1 of CSD 4464. The assignment consists of five coding challenges inspired by "Indiana Jones and the Template of Infinite Recursions" lab. Each challenge implements a different data structure and demonstrates basic operations for storing and managing elements.
+The CSD 4464 Assignment 1 solutions are available in this repository. Five code problems comprise the assignment, which draws inspiration from the "Indiana Jones and the Template of Infinite Recursions" lab. Every challenge highlights fundamental processes for storing and managing items while implementing a distinct data structure.
 
 ## Challenges and Approaches
 1. **The Array Artifact (`ArtifactVault.java`)**:
    - Implements an array to store ancient artifacts.
-   - Methods include: adding an artifact, removing an artifact, linear search, and binary search.
+   - There are other techniques, such as binary search, linear search, and artefact addition and removal.
    
 2. **The Linked List Labyrinth (`LabyrinthPath.java`)**:
    - Uses a singly linked list to represent a path.
@@ -36,4 +36,7 @@ This repository contains solutions for Assignment 1 of CSD 4464. The assignment 
 - The `ClueTree` is implemented as a binary search tree for storing unique clues.
 
 ## How to Run the Code
-1. Clone this repository to your local machine using:
+1. Clone this repository to your local machine using:git clone https://github.com/YourUsername/DataStructures-Assignment1-YourName.git
+2. Open the project in your preferred IDE.
+3. Run each class's `main` method individually to test the functionality.
+4. Each class file contains its own `main` method for demonstration and testing purposes.
